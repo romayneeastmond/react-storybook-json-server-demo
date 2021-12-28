@@ -1,0 +1,65 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Introduction/Welcome" />
+
+## Welcome to React Demo
+
+This project shows the basic features associated with creating a vanilla React application capable of organizing features into separate pages using a Single Page Application (SPA) approach.
+
+Although this project uses Bootstrap, via CDN (i.e **not** React Bootstrap), for styling of components; all reusable elements (Alert, Button, Card, Modal, Pager, and Toast) were created to demonstrate React props and state management.
+
+## How to Use this Storybook
+
+This project is divided into Tasks components and User Interface (UI) specific components.
+
+<div className='row mt-4'>
+    <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12 p-0'>
+        <h5>Tasks</h5>
+        <p>Basically a set of interfaces responsible for Create, Retrieve, Update, and Delete (CRUD) operations related to a 'to-do' list.</p>
+    </div>
+    <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12 p-0'>        
+        <h5>User Interface (UI)</h5>
+        <p>Demonstrates the custom Bootstrap components (Alert, Button, Modal, etc.) that can be tested against props, state, and event changes.</p>
+    </div>    
+</div>
+
+## Live Demo
+
+Live demo hosted in Microsoft Azure [React Demo Project](https://dev-react-demo-re01.azurewebsites.net/).
+
+## Configuring Storybook to use Boostrap CDN
+
+Within the .storybook folder are configuration files responsible for certain aspects of Storybook.
+
+The main.js is responsible for configuring how Storybook locates files in the project and also configuring addons. For example, this project uses the 'Story' addon which shows the source code used to generate a story.
+
+The preview-body.html and preview-head.html files are responsible for injecting code into the iframe that displays the story's Canvas. Here the CSS and Javascript files need for Bootstrap CDN have been added.
+
+The preview.js sets up decorators that apply to all stories in the book. Here &lt;**BrowserRouter** /&gt;, provided by **react-router-dom**, allows React links to be clicked from within a story. Since some components use shared React state the Provider from **react-redux** is also wrapped around each &lt;**Story** /&gt; component.
+
+## Known Issues
+
+Finally some stories are wired up using Storybook state which can be installed by using:
+
+<code>
+    npm i storybook-addon-state
+</code>
+
+However there is an issue that the Storybook state is only available from within the Canvas tab. Therefore on the Docs tab some stories might not respond to events as expected. 
+
+## Building Storybook
+
+The default command for building Storybook is:
+
+<code>
+    npm run build-storybook
+</code>
+
+With webpack4 there is an issue related to the favico.ico not packaging correctly which might prevent the build from succeeding. Do the following:
+
+1. Use a text editor capable of searching content by the equivalent path \node_modules\@storybook\core-server\dist
+1. Search for text in .js files matching _require.resolve('./public/favicon.ico');_ and _require.resolve('../public/favicon.ico');_
+1. Replace those definitions with _var defaultFavIcon = './public/favicon.ico'; and _var defaultFavIcon = '../public/favicon.ico';_
+1. Run the Storybook build command
+
+This has been described here [[React JS] Build error, NestedError: Cannot copy '@storybook\core-server\diat\node_modules\@storybook\core-server\dist\cjs\public\favicon.ico''](https://github.com/storybookjs/storybook/issues/14466)

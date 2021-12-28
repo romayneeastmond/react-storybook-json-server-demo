@@ -1,0 +1,42 @@
+{
+  "tasks": [
+    {
+      "text": "St. Valentine's Day",
+      "day": "14th February, 2021",
+      "reminder": true,
+      "id": 1
+    },
+    {
+      "text": "New Years Day",
+      "day": "1st January, 2022",
+      "reminder": false,
+      "id": 2
+    },
+    {
+      "text": "Christmas Day",
+      "day": "25th December, 2022",
+      "reminder": false,
+      "id": 3
+    },
+    {
+      "text": "Boxing Day",
+      "day": "26th December, 2022",
+      "reminder": false,
+      "id": 4
+    },
+    {
+      "text": "My Anniversary",
+      "day": "29th March, 2022",
+      "reminder": true,
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Romayne Eastmond",
+      "emailAddress": "admin@admin.com",
+      "password": "password"
+    }
+  ]
+}
