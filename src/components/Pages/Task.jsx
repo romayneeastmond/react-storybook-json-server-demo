@@ -1,6 +1,10 @@
 import TasksDetail from '../Tasks/TasksDetail'
 
+import useTitle from '../../hooks/use-title'
+
 const Task = () => {
+    useTitle('Task Details')
+
     return (
         <div className='container'>
             <div className='row'>

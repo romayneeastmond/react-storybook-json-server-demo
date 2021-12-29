@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types'
 
+import useTitle from '../../hooks/use-title'
+
 const Error404 = ({ errorCode, message, children }) => {
+    useTitle('Error')
+
     return (
         <div className='container'>
             <div className='row'>

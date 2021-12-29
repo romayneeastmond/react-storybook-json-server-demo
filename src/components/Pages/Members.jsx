@@ -1,9 +1,13 @@
 import { Link, Outlet } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
+import useTitle from '../../hooks/use-title'
+
 import Button from '../UI/Button'
 
 const Members = ({ onLogout }) => {
+    useTitle('Members Only')
+
     return (
         <div className='container'>
             <div className='row'>

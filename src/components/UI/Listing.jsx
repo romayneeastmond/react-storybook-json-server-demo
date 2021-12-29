@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { FaArrowDown } from 'react-icons/fa'
 import { FaArrowUp } from 'react-icons/fa'
-import { FaSpinner } from 'react-icons/fa'
+import { FaCircleNotch } from 'react-icons/fa'
 
 const Listing = ({ data, headings, totalNumberOfRecords, actions, empty, loading, currentPagerPage, numberOfRecordsPerPage, maximumPagerLinks, onSortClick, onPagerClick, onActionsClick }) => {
     const [records, setRecords] = useState([])
@@ -212,7 +212,7 @@ const Listing = ({ data, headings, totalNumberOfRecords, actions, empty, loading
                     <div className='listing'>
                         {
                             (isLoading === true) &&
-                            <FaSpinner className='spinner' />
+                            <FaCircleNotch className='spinner' />
                         }
 
                         {

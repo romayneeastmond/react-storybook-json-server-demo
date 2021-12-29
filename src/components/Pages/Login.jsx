@@ -1,7 +1,11 @@
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
+import useTitle from '../../hooks/use-title'
+
 const Login = ({ onLogin }) => {
+    useTitle('Members Login')
+
     useEffect(() => {
         const load = async () => {
             await onLogin()
