@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import PropTypes from 'prop-types'
 import { Link, useParams } from 'react-router-dom'
 import { FaEdit } from 'react-icons/fa'
-import { FaSpinner } from 'react-icons/fa'
+import { FaCircleNotch } from 'react-icons/fa'
 
 import { push } from '../../store/notificationToastsSlice'
 
@@ -106,7 +106,7 @@ const TasksDetail = ({ mockTasksService }) => {
                     <>
                         {
                             loading === true &&
-                            <FaSpinner className='spinner' />
+                            <FaCircleNotch className='spinner' />
                         }
 
                         {

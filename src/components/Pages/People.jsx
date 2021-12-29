@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 
+import useTitle from '../../hooks/use-title'
+
 import Listing from '../UI/Listing'
 
 const People = () => {
+    useTitle('People Listing')
+
     const data = [
         {
             id: 1,

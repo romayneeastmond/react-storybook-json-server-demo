@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { FaSpinner } from 'react-icons/fa'
+import { FaCircleNotch } from 'react-icons/fa'
+
+import useTitle from '../../hooks/use-title'
 
 import TasksAdd from '../Tasks/TasksAdd'
 import TasksList from '../Tasks/TasksList'
@@ -13,6 +15,8 @@ import Modal from '../UI/Modal'
 import tasksService from '../../api/Tasks/TasksService'
 
 const Tasks = ({ showAdd, onShowAdd }) => {
+    useTitle('Tasks Listing')
+
     const [tasks, setTasks] = useState([])
     const [addMessage, setAddMessage] = useState('')
     const [showModal, setShowModal] = useState(false)
@@ -142,7 +146,7 @@ const Tasks = ({ showAdd, onShowAdd }) => {
                             <>
                                 {
                                     loading === true &&
-                                    <FaSpinner className='spinner' />
+                                    <FaCircleNotch className='spinner' />
                                 }
 
                                 {
@@ -164,7 +168,7 @@ const Tasks = ({ showAdd, onShowAdd }) => {
                             The Add button located near the top heading changes state on click to toggle the display of the <strong>TasksAdd</strong> component.
                         </p>
                         <p>
-                            Each <strong>TasksInfo</strong> component can be double clicked to change the reminder status to true.
+                            Each <strong>TasksInfo</strong> component can be <strong>double clicked</strong> to change the reminder status to true.
                             This also demonstrates conditional CSS styles based on state changes.
                         </p>
                         <p>

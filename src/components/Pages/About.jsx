@@ -1,6 +1,10 @@
 import { Link, Routes, Route } from 'react-router-dom'
 
+import useTitle from '../../hooks/use-title'
+
 const About = () => {
+    useTitle('About React Demo')
+
     return (
         <div className='container'>
             <div className='row'>

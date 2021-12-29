@@ -2,7 +2,7 @@ import React, { Suspense, useState, useEffect } from 'react'
 import { Navigate, Routes, Route, useNavigate } from 'react-router-dom'
 
 import Task from './components/Pages/Task'
-import Tasks from'./components/Pages/Tasks'
+import Tasks from './components/Pages/Tasks'
 import Members from './components/Pages/Members'
 import Welcome from './components/Pages/Welcome'
 import Error404 from './components/Pages/Error404'
@@ -17,7 +17,7 @@ import authenticationService from './api/Authentication/AuthenticationService'
 
 import './App.scss'
 
-const About =  React.lazy(() => import('./components/Pages/About'))
+const About = React.lazy(() => import('./components/Pages/About'))
 const People = React.lazy(() => import('./components/Pages/People'))
 const Legal = React.lazy(() => import('./components/Pages/Legal'))
 const Login = React.lazy(() => import('./components/Pages/Login'))

@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import useTitle from '../../hooks/use-title'
+
 import Button from '../UI/Button'
 import Modal from '../UI/Modal'
 
 const Legal = () => {
+    useTitle('Legal Terms')
+
     const [showModal, setShowModal] = useState(false)
 
     const onShowModal = () => {
