@@ -33,7 +33,7 @@ const Toast = ({ colour, title, subTitle, text, icon, persist, onClick }) => {
             if (onClick !== null) {
                 onClick()
             }
-        }, 1000);
+        }, 1000)
     }
 
     const onToastClick = (onClick) => {

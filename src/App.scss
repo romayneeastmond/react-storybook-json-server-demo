@@ -297,3 +297,17 @@ footer {
     width: 350px;
     z-index: 2;
 }
+
+@media (max-width: 767px) {
+    div {
+        &.listing {
+            .actions-label {
+                margin-left: 0 !important
+            }
+
+            .listing-pager {
+                display: block !important;
+            }
+        }
+    }
+}
