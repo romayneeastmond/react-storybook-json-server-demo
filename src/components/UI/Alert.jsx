@@ -33,7 +33,7 @@ const Alert = ({ colour, text, autoClick, onClick }) => {
             if (onClick !== null) {
                 onClick()
             }
-        }, 500);
+        }, 500)
     }
 
     const onAlertClick = (event, onClick) => {

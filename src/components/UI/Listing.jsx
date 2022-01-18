@@ -145,7 +145,7 @@ const Listing = ({ data, headings, totalNumberOfRecords, actions, empty, loading
         const data = {
             action: selectAllowedActionsRef.current.value,
             data: records.filter(x => x.checked)
-        };
+        }
 
         onActionsClick(data)
     }
@@ -173,7 +173,7 @@ const Listing = ({ data, headings, totalNumberOfRecords, actions, empty, loading
             sortDirection: currentSortDirection,
         }
 
-        onSortClick(data);
+        onSortClick(data)
     }
 
     const onRecordSelect = (event) => {
@@ -282,7 +282,7 @@ const Listing = ({ data, headings, totalNumberOfRecords, actions, empty, loading
                         {
                             (records && records.length > 0 && columns && columns.length > 0 && pagerSettings && pagerSettings.pages && pagerSettings.pages.length > 0) &&
                             <div>
-                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                <div className='listing-pager' style={{ display: 'flex', justifyContent: 'space-between' }}>
                                     <div style={{ flex: 2 }}>
                                         <ul className='pagination pagination-sm'>
                                             <li className={`page-item first-item ${pagerSettings.currentPage === 1 ? 'disabled' : ''}`}>
@@ -335,7 +335,7 @@ const Listing = ({ data, headings, totalNumberOfRecords, actions, empty, loading
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <span className='text-muted small pager-label ml-3'>Actions</span>
+                                                            <span className='text-muted small pager-label ml-3 actions-label'>Actions</span>
                                                         </td>
                                                         <td>
                                                             <select ref={selectAllowedActionsRef} className='form-control form-control-sm ml-1' name='action'>

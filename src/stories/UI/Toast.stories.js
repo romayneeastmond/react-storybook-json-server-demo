@@ -1,4 +1,4 @@
-import { Title, Subtitle, Description, ArgsTable, PRIMARY_STORY } from '@storybook/addon-docs';
+import { Title, Subtitle, Description, ArgsTable, PRIMARY_STORY } from '@storybook/addon-docs'
 
 import Toast from '../../components/UI/Toast'
 import ToastWrapper from '../../components/UI/ToastWrapper'

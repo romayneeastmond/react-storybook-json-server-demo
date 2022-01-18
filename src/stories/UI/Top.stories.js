@@ -1,4 +1,4 @@
-import { Title, Subtitle, Description } from '@storybook/addon-docs';
+import { Title, Subtitle, Description } from '@storybook/addon-docs'
 
 import Top from '../../components/UI/Top'
 

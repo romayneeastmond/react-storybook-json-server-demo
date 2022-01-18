@@ -9,7 +9,7 @@ const useTitle = (title) => {
         return () => {
             document.title = previousTitle
         }
-    }, [])
+    }, [title])
 }
 
 export default useTitle

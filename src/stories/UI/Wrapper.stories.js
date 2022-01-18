@@ -1,5 +1,5 @@
 import useState from 'storybook-addon-state'
-import { Title, Subtitle, Description } from '@storybook/addon-docs';
+import { Title, Subtitle, Description } from '@storybook/addon-docs'
 
 import Toast from '../../components/UI/Toast'
 import ToastWrapper from '../../components/UI/ToastWrapper'

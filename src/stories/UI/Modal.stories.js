@@ -1,5 +1,5 @@
 import useState from 'storybook-addon-state'
-import { Title, Subtitle, Description, ArgsTable, PRIMARY_STORY } from '@storybook/addon-docs';
+import { Title, Subtitle, Description, ArgsTable, PRIMARY_STORY } from '@storybook/addon-docs'
 
 import Modal from '../../components/UI/Modal'
 
