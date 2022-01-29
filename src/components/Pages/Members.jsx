@@ -13,7 +13,7 @@ const Members = ({ onLogout }) => {
             <div className='row'>
                 <div className='col'>
                     <h1 className='mb-3 mt-3'>Welcome Back Admin User</h1>
-                    <h2></h2>
+
                     <p>
                         This is your guarded route that can only be accessed by logged in users.
                     </p>

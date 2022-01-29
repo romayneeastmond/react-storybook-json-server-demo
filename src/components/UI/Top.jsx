@@ -32,7 +32,7 @@ const Top = () => {
 
     return (
         <>
-            <a ref={toTopRef} className='scroll-top box-shadow' href='' onClick={(e) => onTopClick(e)}>
+            <a ref={toTopRef} className='scroll-top box-shadow' href='/' onClick={(e) => onTopClick(e)}>
                 <span className='scroll-top-tooltip'>Back to Top</span>
 
                 <FaArrowUp className='scroll-top-icon' />
