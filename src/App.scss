@@ -191,10 +191,10 @@ footer {
         text-decoration: none;
         width: 140px;
 
-        .scroll-top-tooltip {            
+        .scroll-top-tooltip {
             opacity: 1;
             position: relative;
-            right: 3px;            
+            right: 3px;
             top: 8px;
             visibility: visible;
         }
@@ -302,7 +302,7 @@ footer {
     div {
         &.listing {
             .actions-label {
-                margin-left: 0 !important
+                margin-left: 0 !important;
             }
 
             .listing-pager {
