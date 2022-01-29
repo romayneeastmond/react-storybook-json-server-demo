@@ -40,8 +40,9 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
         cache: 'npm'
 
-    - name: npm build-storybook
+    - name: npm install, build-storybook
       run: |
+        npm install
         npm run build-storybook
       env:
         CI: false
