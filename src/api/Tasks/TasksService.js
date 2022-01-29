@@ -11,7 +11,7 @@ const tasksService = () => {
         })
 
         if (!res.ok) {
-
+			return
         }
 
         const data = await res.json()
@@ -27,22 +27,25 @@ const tasksService = () => {
 
     const get = async (id) => {
         const res = await fetch(`${apiUrl}/${id}`)
-        const data = await res.json()
 
         if (!res.ok) {
-            
+            return
         }        
+
+		const data = await res.json()
 
         return data
     }
 
     const list = async () => {
         const res = await fetch(apiUrl)
-        const data = await res.json()
+        
 
         if (!res.ok) {
-            
+            return
         }
+		
+		const data = await res.json()
 
         return data
     }
@@ -57,7 +60,7 @@ const tasksService = () => {
         })
 
         if (!res.ok) {
-            
+            return
         }        
 
         const data = await res.json()
