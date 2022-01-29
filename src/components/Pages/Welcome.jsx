@@ -21,7 +21,7 @@ const Welcome = ({ production }) => {
                             (Alert, Button, Card, Modal, Pager, and Toast) were created to demonstrate React props and state management.
                         </p>
                         <p>
-                            <a className='btn btn-sm btn-info' href='https://dev-react-demo-storybook-re01.azurewebsites.net/' target='_blank' role='button'>Click to view Storybook <FaArrowRight /></a>
+                            <a className='btn btn-sm btn-info' href='https://dev-react-demo-storybook-re01.azurewebsites.net/' target='_blank' role='button' rel="noreferrer">Click to view Storybook <FaArrowRight /></a>
                         </p>
                     </>
                 }
