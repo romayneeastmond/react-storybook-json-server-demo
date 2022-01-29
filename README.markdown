@@ -57,6 +57,10 @@ Then deploy the build folder after running the following command
 npm build
 ```
 
+## GitHub Actions
+
+For the deploying Node.js to Azure Web App action, set the environment variable CI to false. This ensures that the GitHub build action, returns the same expected results as building locally. The CI variable being set to true, elevates code warnings to errors.
+
 ## Copyright and Ownership
 
 All terms used are copyright to their original authors.
