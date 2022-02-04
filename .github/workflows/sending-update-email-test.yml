@@ -15,4 +15,4 @@ jobs:
       - name: Sending Update Email
         run: |
           curl --request GET \
-          ${{ env.SERVERLESS_URL }}?subject=Update%20Notification&to=${{ env.TO }}&sites=http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/&source=GitHub%20Actions
+          ${{ env.SERVERLESS_URL }}?subject=Update%20Notification&to=${{ env.TO }}&sites=Hello&source=GitHub%20Actions
