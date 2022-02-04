@@ -9,9 +9,13 @@ jobs:
 
     steps:
       - name: Sending Update Email
+        env:
+          SERVERLESS_URL: ${{ secrets.SERVERLESS_MAILER_ADDRESS }}
+          TO: ${{ secrets.SERVERLESS_SEND_TO }}
+          
         uses: Jtalk/url-health-check-action@v2
         with:
-          url: ${{ format('{0}?subject=Update Notification&to={1}&sites=http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/&source=GitHub Actions', secrets.SERVERLESS_MAILER_ADDRESS, secrets.SERVERLESS_SEND_TO) }}
+          url: ${{ format('{0}?subject=Update Notification&to={1}&sites=http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/&source=GitHub Actions', $SERVERLESS_URL, $TO) }}
           max-attempts: 1
           follow-redirect: false
           retry-all: false
