@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: Sending Update Email
         run: |
-          curl
-          --url https://dev-nodejs-canc-dev-azure-heartbeat.azurewebsites.net/api/NotifySiteUpdatedMailer?subject=Update Notification&to=romayne@gmail.com&sites=http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/&source=GitHub Actions
+          curl --request GET \
+          --url 'https://dev-nodejs-canc-dev-azure-heartbeat.azurewebsites.net/api/NotifySiteUpdatedMailer?subject=Update Notification&to=romayne@gmail.com&sites=http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/&source=GitHub Actions'
