@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Sending Update Email
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{ "subject": "Update Notification", "to": ${{ secrets.SERVERLESS_SEND_TO }}, "source": "GitHub Actions", "sites": "http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/" }' ${{ secrets.SERVERLESS_MAILER_ADDRESS }}
+          curl -X POST -H "Content-Type: application/json" -d '{ "subject": "Update Notification", "to": "${{ secrets.SERVERLESS_SEND_TO }}", "source": "GitHub Actions", "sites": "http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/" }' ${{ secrets.SERVERLESS_MAILER_ADDRESS }}
