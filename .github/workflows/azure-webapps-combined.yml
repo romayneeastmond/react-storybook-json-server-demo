@@ -1,0 +1,57 @@
+name: "Azure React and Storybook Workflow"
+
+on:
+  push:
+    branches:
+      - components
+  workflow_dispatch:
+
+jobs:
+  build_react_demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present       
+          npm run test --if-present
+        env:
+          CI: false
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: node-app
+          path: ./build
+
+  build_storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: npm install, build-storybook
+        run: |
+          npm install
+          npm run build-storybook
+        env:
+          CI: false
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: node-app
+          path: ./storybook-static
