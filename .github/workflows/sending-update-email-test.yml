@@ -11,4 +11,4 @@ jobs:
       - name: Sending Update Email
         run: |
           curl --request GET \
-          https://dev-nodejs-canc-dev-azure-heartbeat.azurewebsites.net/api/NotifySiteUpdatedMailer?to=romayne@gmail.com&sites=Hello,World
+          https://dev-nodejs-canc-dev-azure-heartbeat.azurewebsites.net/api/NotifySiteUpdatedMailer?to=romayne@gmail.com&sites=Hello
