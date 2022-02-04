@@ -2,10 +2,6 @@ name: "Sending Update Email Test"
 
 on:
   workflow_dispatch:
-
-env:
-  SERVERLESS_URL: ${{ secrets.SERVERLESS_MAILER_ADDRESS }}
-  TO: ${{ secrets.SERVERLESS_SEND_TO }}
           
 jobs:
   serverless_email_confirmation:
@@ -15,4 +11,4 @@ jobs:
       - name: Sending Update Email
         run: |
           curl --request GET \
-          ${{ env.SERVERLESS_URL }}?subject=Update%20Notification&to=romayne@gmail.com&sites=Hello&source=GitHub%20Actions
+          https://dev-nodejs-canc-dev-azure-heartbeat.azurewebsites.net/api/NotifySiteUpdatedMailer?subject=Update%20Notification&to=romayne@gmail.com&sites=Hello&source=GitHub%20Actions
