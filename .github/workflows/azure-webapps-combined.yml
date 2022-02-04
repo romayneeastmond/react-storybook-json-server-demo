@@ -51,10 +51,6 @@ jobs:
         with:
           name: node-app-1
 
-      - name: Variables
-        id: vars_react_demo
-        run: echo ::set-output name=url_react_demo::${{ steps.deploy-to-webapp-1.outputs.webapp-url }}
-
       - name: "Deploy to dev-react-demo-re01"
         id: deploy-to-webapp-1
         uses: azure/webapps-deploy@v2
@@ -100,10 +96,6 @@ jobs:
         with:
           name: node-app-2
 
-      - name: Variables
-        id: vars_storybook
-        run: echo ::set-output name=url_storybook::${{ steps.deploy-to-webapp-2.outputs.webapp-url }}
-
       - name: "Deploy to dev-react-demo-storybook-re01"
         id: deploy-to-webapp-2
         uses: azure/webapps-deploy@v2
@@ -120,7 +112,7 @@ jobs:
       - name: URL Health Check React Demo
         uses: Jtalk/url-health-check-action@v2
         with:
-          url: ${{ needs.deploy_react_demo.vars_react_demo.outputs.url_react_demo }}
+          url: http://dev-react-demo-re01.azurewebsites.net/
           max-attempts: 3
           retry-delay: 30s
           follow-redirect: false
@@ -129,7 +121,7 @@ jobs:
       - name: URL Health Check Storybook
         uses: Jtalk/url-health-check-action@v2
         with:
-          url: ${{ needs.deploy_storybook.vars_storybook.outputs.url_storybook }}
+          url: http://dev-react-demo-storybook-re01.azurewebsites.net/
           max-attempts: 3
           retry-delay: 30s
           follow-redirect: false
