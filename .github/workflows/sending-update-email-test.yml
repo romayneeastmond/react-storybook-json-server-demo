@@ -15,8 +15,8 @@ jobs:
       - name: Sending Update Email
         run: |
           curl --request GET \
-          --data-urlencode 'subject=Update Notification' \
-          --data-urlencode 'to=romayne@gmail.com' \
-          --data-urlencode 'sites=http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/' \
-          --data-urlencode 'source=GitHub Actions' \
+          --data-urlencode "subject=Update Notification" \
+          --data-urlencode "to=romayne@gmail.com" \
+          --data-urlencode "sites=http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/" \
+          --data-urlencode "source=GitHub Actions" \
           https://dev-nodejs-canc-dev-azure-heartbeat.azurewebsites.net/api/NotifySiteUpdatedMailer
