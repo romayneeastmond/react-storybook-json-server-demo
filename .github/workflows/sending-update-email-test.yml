@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: Sending Update Email
         run: |
-          curl -X GET -H "Content-Type: application/json" \
+          curl -X POST -H "Content-Type: application/json" \
           -d '{ "subject", "Update Notification", "to": "romayne@gmail.com", "source": "GitHub Actions", "sites": "http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/" }' \
           https://dev-nodejs-canc-dev-azure-heartbeat.azurewebsites.net/api/NotifySiteUpdatedMailer
