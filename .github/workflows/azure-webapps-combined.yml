@@ -126,3 +126,12 @@ jobs:
           retry-delay: 30s
           follow-redirect: false
           retry-all: false
+
+  serverless_email_confirmation:
+    runs-on: ubuntu-latest
+    needs: check_urls
+
+    steps:
+      - name: Sending Update Email
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{ "subject": "Update Notification", "to": "${{ secrets.SERVERLESS_SEND_TO }}", "source": "GitHub Actions", "sites": "http://dev-react-demo-re01.azurewebsites.net/,http://dev-react-demo-storybook-re01.azurewebsites.net/" }' ${{ secrets.SERVERLESS_MAILER_ADDRESS }}
