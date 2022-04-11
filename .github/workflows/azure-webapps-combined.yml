@@ -33,7 +33,7 @@ jobs:
           CI: false
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: node-app-1
           path: ./build
@@ -78,7 +78,7 @@ jobs:
           CI: false
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: node-app-2
           path: ./storybook-static
