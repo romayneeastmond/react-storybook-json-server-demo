@@ -110,7 +110,7 @@ jobs:
 
     steps:
       - name: URL Health Check React Demo
-        uses: Jtalk/url-health-check-action@v2
+        uses: Jtalk/url-health-check-action@v3
         with:
           url: http://dev-react-demo-re01.azurewebsites.net/
           max-attempts: 3
@@ -119,7 +119,7 @@ jobs:
           retry-all: false
 
       - name: URL Health Check Storybook
-        uses: Jtalk/url-health-check-action@v2
+        uses: Jtalk/url-health-check-action@v3
         with:
           url: http://dev-react-demo-storybook-re01.azurewebsites.net/
           max-attempts: 3
