@@ -13,9 +13,9 @@ export default {
         },
         messageString: {
             name: 'Message String (message)',
-            type: { 
-                name: 'string', 
-                required: false 
+            type: {
+                name: 'string',
+                required: false
             },
             defaultValue: '',
             description: 'String value that is copied into the disabled message: PropTypes.element',
@@ -63,7 +63,7 @@ export const MessageAndCode = ({ messageString, ...args }) => {
         >
             <hr />
             <div className='small'>
-                Empyting the Message String field will display an HTML message.
+                Emptying the Message String field will display an HTML message.
                 <br />
                 From Storybook view the 'Story' tab for source code.
             </div>

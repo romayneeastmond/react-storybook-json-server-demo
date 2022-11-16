@@ -26,9 +26,9 @@ export default {
         },
         textString: {
             name: 'Text String (text)',
-            type: { 
-                name: 'string', 
-                required: false 
+            type: {
+                name: 'string',
+                required: false
             },
             defaultValue: '',
             description: 'String value that is copied into the disabled text: PropTypes.element',
@@ -54,7 +54,7 @@ export default {
                     <Description />
                     <hr />
                     <p className='small'>Toast stories unavailable because unrelated toasts rely on event callbacks that do not interact well with this view.</p>
-                    <ArgsTable story={PRIMARY_STORY} />                    
+                    <ArgsTable story={PRIMARY_STORY} />
                 </>
             )
         }
@@ -94,7 +94,7 @@ export const FontAwesome = ({ textString, ...args }) => {
     return (
         <>
             <div className='small'>
-                Empyting the Text String field will display an HTML message. From Storybook view the 'Story' tab for source code.
+                Emptying the Text String field will display an HTML message. From Storybook view the 'Story' tab for source code.
             </div>
             <hr />
             <ToastWrapper>
@@ -120,7 +120,7 @@ export const StickyToast = ({ textString, ...args }) => {
     return (
         <>
             <div className='small'>
-                Empyting the Text String field will display an HTML message. From Storybook view the 'Story' tab for source code.
+                Emptying the Text String field will display an HTML message. From Storybook view the 'Story' tab for source code.
             </div>
             <hr />
             <ToastWrapper>
