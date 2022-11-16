@@ -59,7 +59,7 @@ export const HideClose = ({ textString, ...args }) => {
     return (
         <>
             <div className='small'>
-                Empyting the Text String field will display an HTML message.
+                Emptying the Text String field will display an HTML message.
             </div>
             <hr />
 
@@ -81,7 +81,7 @@ export const AutoClick = ({ textString, ...args }) => {
     return (
         <>
             <div className='small'>
-                Empyting the Text String field will display an HTML message. From Storybook view the 'Story' tab for source code.
+                Emptying the Text String field will display an HTML message. From Storybook view the 'Story' tab for source code.
             </div>
             <hr />
 
@@ -104,7 +104,7 @@ export const WarningAlert = ({ textString, ...args }) => {
     return (
         <>
             <div className='small'>
-                Empyting the Text String field will display an HTML message. From Storybook view the 'Story' tab for source code.
+                Emptying the Text String field will display an HTML message. From Storybook view the 'Story' tab for source code.
             </div>
             <hr />
 
