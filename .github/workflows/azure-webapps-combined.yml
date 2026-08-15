@@ -33,7 +33,7 @@ jobs:
           CI: false
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: node-app-1
           path: ./build
@@ -47,7 +47,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: node-app-1
 
@@ -78,7 +78,7 @@ jobs:
           CI: false
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: node-app-2
           path: ./storybook-static
@@ -92,7 +92,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: node-app-2
 
@@ -110,7 +110,7 @@ jobs:
 
     steps:
       - name: URL Health Check React Demo
-        uses: Jtalk/url-health-check-action@v2
+        uses: Jtalk/url-health-check-action@v3
         with:
           url: http://dev-react-demo-re01.azurewebsites.net/
           max-attempts: 3
@@ -119,7 +119,7 @@ jobs:
           retry-all: false
 
       - name: URL Health Check Storybook
-        uses: Jtalk/url-health-check-action@v2
+        uses: Jtalk/url-health-check-action@v3
         with:
           url: http://dev-react-demo-storybook-re01.azurewebsites.net/
           max-attempts: 3
