@@ -64,9 +64,3 @@ For the deploying Node.js to Azure Web App action, set the environment variable 
 ## Copyright and Ownership
 
 All terms used are copyright to their original authors.
-
-## Live Demo
-
-Live demo hosted in Microsoft Azure [React Demo Project](https://dev-react-demo-re01.azurewebsites.net/) and [Storybook UI Documentation](https://dev-react-demo-storybook-re01.azurewebsites.net/).
-
-Azure F1 instances are :snowflake: ice cold. Those first loads are going to need some :sun_with_face: warming up.
